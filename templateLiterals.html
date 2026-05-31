@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Template Literals</title>
+  </head>
+  <body>
+    <h1>Template Literals Demo</h1>
+    <script>
+      // normal template syntax and example
+      const num1 = 10;
+      const num2 = 20;
+      console.log(`Number 1: ${num1} and number 2: ${num2}`);
+
+      // Expression inside interpolation
+      console.log(
+        `We are doing addition of ${num1} and ${num2} and result is: ${num1 + num2}`,
+      );
+
+      // Multiline strings
+      const str = `Heya!! deeksha this side
+     I am 24 years old`;
+      console.log(str);
+
+      // function calls inside template literals
+      function greet() {
+        return "Hello";
+      }
+      console.log(`${greet()}, Deeksha!`);
+
+      //Nested template literals
+      const user = {
+        name: "Deeksha",
+        age: 24,
+      };
+      console.log(`
+      Name is :${user.name}, 
+      Age is: ${user.age}`);
+
+      //Conditional Rendering
+      const isLoggedIn = true;
+      console.log(`${isLoggedIn ? "Welcome" : "Please login"}`);
+    </script>
+  </body>
+</html>

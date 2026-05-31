@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <h3>Promise in javascript</h3>
+    <!--  multi line comment 
+  <script>
+    const promise= new Promise((resolve, reject)=>{
+        setTimeout(() => {
+            resolve("hi promise")
+        }, 2000);
+
+    })
+    promise.then((result)=>{
+        console.log(result);
+    })
+    </script>
+-->
+    <!--creating login button-->
+    <button onclick="userLogin()" id="clr">Log In</button>
+    <script>
+        function userLogin(){
+            document.getElementById("clr").style.backgroundColor="yellow"; // to give button a bg color after click
+
+        let email="abc@yahoo.com";
+        let password="123456";
+        const loginPromise= new Promise((resolve, reject)=>{
+            setTimeout(() => {
+                resolve({login:true, id:10})
+            }, 1000);
+        })
+        loginPromise.then((result)=>{
+            console.log(result);
+            if(result.login){
+                alert("Go to profile");
+            }
+            else{
+                alert("Try Again !!");
+            }
+        })
+    }
+
+    </script>
+   
+</body>
+</html>
+ 
