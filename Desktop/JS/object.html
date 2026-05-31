@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+</head>
+<body>
+    <h1>Display & add object Data in UI</h1>
+    <input type="text" id="key" placeholder="Enter Key">
+    <input type="text" id="val" placeholder="Enter Value">
+    <button onclick="AddNewData()">Add Data</button>
+
+<ul id="user-Ul"></ul>
+    <script>
+        let user={
+            name:"John",
+            age:29,
+            email: 'John@yahoo.com'
+        }
+        
+        function DisplayObject(){
+            let userEl=document.getElementById("user-Ul");
+            userEl.innerHTML="";
+            for(let key in user){
+                userEl.innerHTML+="<li>"+key+" is "+user[key]+"</li>"
+            }
+
+        }
+        function AddNewData(){
+            let key=document.getElementById("key").value;
+            let value=document.getElementById("val").value;
+            console.log(key, value);
+
+            user[key]=value;
+
+        console.log(user);
+        DisplayObject();
+        }
+        DisplayObject();
+
+    </script>
+    
+</body>
+</html>

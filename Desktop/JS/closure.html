@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h2>Closure Concept</h2>
+    <script>
+        // function a(){
+        //     let msg="hi";
+        //     function b(){
+        //         console.log(msg);
+        //         console.log(c);
+        //     }
+        //     return b();
+        // }
+        // a();
+/*****************************************
+        function num(){
+            let count=0;
+            function increment(){
+                count++;
+                console.log(count);
+            }
+            return increment
+        }
+        const fn=num();
+        fn();
+        fn();       */
+    </script>
+
+    <h2>Lexical scope</h2>
+    <script>
+        let a =2;
+        console.log(b); // reference error b is not defined , because we can not access variable from inner access but vice versa possible 
+        function outer(){
+            let b=6;
+            function inner(){
+                let sum=a+b;// so here we can access the variable of global scope and outer(parent) scope inside inner function
+                console.log(sum);// output 8 
+            }
+            inner();
+        }
+        outer();
+    </script>
+</body>
+</html>
