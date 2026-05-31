@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game</title>
+    <style>
+      .dice {
+        width: 100%;
+        align-items: center;
+        length: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Guess the number between 0 to 100</h1>
+    <h2>Result: <span id="result"></span></h2>
+    <input type="number" id="input" placeholder="Enter a number" />
+    <button id="guess">Guess</button>
+    <h3>Total clicks <span id="clicks">0</span></h3>
+    <img src="Images/dice.png" class="dice" />
+
+    <script src="numberGuess.js" defer></script>
+  </body>
+</html>
